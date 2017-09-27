@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var audio = document.getElementById('music');
     audio.play();
+    console.log("OK!")
     $('#u-globalAudio')[0].addEventListener("touchend", function() {
         if (audio.paused) {
             $(this).find('span').css('backgroundPosition', '100% 0');
