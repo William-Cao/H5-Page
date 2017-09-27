@@ -1,0 +1,269 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+body{
+	font-family:"microsoft yahei";
+	background: #fff;
+}
+img{
+  display:block;
+}
+@media screen and (max-width:359px) and (min-width:320px) {
+    html,body{
+        font-size: 50px !important;
+    }
+}
+@media screen and (max-width:374px) and (min-width:360px) {
+    html,body{
+        font-size: 56.25px !important;
+    }
+}
+@media screen and (max-width:413px) and (min-width:375px) {
+   html,body{
+        font-size: 58.5px !important;
+    }
+}
+@media screen and (max-width:639px)  and (min-width:414px){
+   html,body{
+        font-size: 64.6px !important;
+    }
+}@media screen and (min-width:640px) {
+   html,body{
+        font-size: 100px !important;
+    }
+}
+
+@-webkit-keyframes arrowUp {
+  0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+  60% {opacity: 1;-webkit-transform: translate(0,0);}
+  100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes arrowUp {
+  0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+  60% {opacity: 1;-moz-transform: translate(0,0);}
+  100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes arrowUp {
+  0%,30% {opacity: 0;transform: translate(0,10px);}
+  60% {opacity: 1;transform: translate(0,0);}
+  100% {opacity: 0;transform: translate(0,-8px);}
+}
+#swiper-container-v {
+	width: 100%;
+	max-width:640px;
+  height: 100%;
+  margin: 0 auto;
+}  
+.swiper-slide{
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+.section1{
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg.png) no-repeat top;
+  background-size: cover; 
+  overflow:hidden;
+}
+.section2{
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-2.png) no-repeat top;
+  background-size: cover; 
+  overflow:hidden;
+}
+.arrowUp {
+    height: auto;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin-left: -15px;
+    animation: arrowUp 2s infinite ease-in;
+    -webkit-animation: arrowUp 2s infinite ease-in;
+    -moz-animation: arrowUp 2s infinite ease-in;
+  }
+
+  .music {
+    background: rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 6.5%;
+    top: 3%;
+    z-index: 3
+  }
+
+  .music span {
+    background:url(../images/music.png) no-repeat;
+    -webkit-background-size: 100% 200%;
+    background-size: 100% 200%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 8px auto;
+  }
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    opacity: .4;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  .swiper-slide .info1 {
+    position: absolute;
+    top: 1.5rem;
+    width: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+  }
+
+  .swiper-slide .info2 {
+    position: absolute;
+    top: 2.6rem;
+    width: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+  }
+
+  .swiper-slide .info3 {
+    position: absolute;
+    top: 3rem;
+    width: 3.5rem;
+    left: 50%;
+    margin-left: -1.75rem;
+  }
+  .swiper-slide .info4 {
+    position: absolute;
+    top: 5.8rem;
+    width: 90%;
+    right: 0;
+  }
+  .swiper-slide .info5 {
+    position: absolute;
+    top: 3.5rem;
+    width: 5rem;
+    left: 50%;
+    margin-left: -2.5rem;
+  }
+  
+  .section2 .show{
+    color: #fff;
+    font-size: .25rem;
+    position: absolute;
+    top:1rem;
+    left: .5rem
+  }
+  .section2 .show .one{
+    font-size: .5rem;
+  }
+  .section2 .info{
+    color: #fff;
+    font-size: .2rem;
+    position: absolute;
+    right:.5rem;
+    top: 1.5rem
+  }
+  .section2 .info p:nth-child(2){
+    padding-left: .3rem;
+  }
+  .section2 .info p:nth-child(3){
+    padding-left: .6rem;
+  }
+  .section2 .line1{
+    width: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 2.5rem;
+    margin-left: -2.5rem;
+  }
+  .section2 .line2{
+    width: 4.5rem;
+    position: absolute;
+    left: 50%;
+    top: 4.5rem;
+    margin-left: -2.25rem;
+  }
+  .section2 .line3{
+    width: 4.5rem;
+    position: absolute;
+    left: 50%;
+    top: 6.8rem;
+    margin-left: -2.25rem;
+  }
+  .swiper-slide-active .section1 .info1{
+    -webkit-animation:fadeInDown 1.2s .5s both;
+    -moz-animation:fadeInDown 1.2s .5s both;
+    animation:fadeInDown 1.2s .5s both;
+  }
+  .swiper-slide-active .section1 .info2{
+    -webkit-animation:fadeInRight 1.2s 1s both;
+    -moz-animation:fadeInRight 1.2s 1s both;
+    animation:fadeInRight 1.2s 1s both;
+  }
+  .swiper-slide-active .section1 .info3{
+    -webkit-animation:fadeInLeft 1.2s 2s both;
+    -moz-animation:fadeInLeft 1.2s 2s both;
+    animation:fadeInLeft 1.2s 2s both;
+  }
+  .swiper-slide-active .section1 .info4{
+    -webkit-animation:fadeInUp 1.5s 4s both;
+    -moz-animation:fadeInUp 1.5s 4s both;
+    animation:fadeInUp 1.5s 4s both;
+  }
+  .swiper-slide-active .section1 .info5{
+    animation:zoomIn 1s ease 3s 1 both,tada 1s 3s 1 forwards;
+    -moz-animation:zoomIn 1s ease 3s 1 both,tada 1s 3s 1 forwards;
+    animation:zoomIn 1s ease 3s 1 both,tada 1s 3s 1 forwards;
+  }
+  .swiper-slide-active .section2 .show{
+    -webkit-animation: rotateInDownLeft 1.5s 0.5s 1 both;
+    -moz-animation: rotateInDownLeft 1.5s 0.5s 1 both;
+    animation: rotateInDownLeft 1.5s 0.5s 1 both;
+  }
+
+ .swiper-slide-active .section2 .info p:nth-child(1){
+    -webkit-animation:fadeInRight 1s 2s both;
+    -moz-animation:fadeInRight 1s 2s both;
+    animation:fadeInRight 1s 2s both;
+ }
+
+ .swiper-slide-active .section2 .info p:nth-child(2){
+    -webkit-animation:fadeInRight 1s 2.2s both;
+    -moz-animation:fadeInRight 1s 2.2s both;
+    animation:fadeInRight 1s 2.2s both;
+ }
+
+ .swiper-slide-active .section2 .info p:nth-child(3){
+    -webkit-animation:fadeInRight 1s 2.5s both;
+    -moz-animation:fadeInRight 1s 2.5s both;
+    animation:fadeInRight 1s 2.5s both;
+ }
+
+  .swiper-slide-active .section2 .line1{
+    -webkit-animation:fadeInUp 1.2s 5s both;
+    -moz-animation:fadeInUp 1.2s 5s both;
+    animation:fadeInUp 1.2s 5s both;
+  }
+  .swiper-slide-active .section2 .line2{
+    -webkit-animation:bounceIn 1.3s ease-out 4s backwards;
+    -moz-animation:bounceIn 1.3s ease-out 4s backwards;
+    animation:bounceIn 1.3s ease-out 4s backwards;
+  }
+  .swiper-slide-active .section2 .line3{
+    -webkit-animation:fadeInDown 1.2s 5s both;
+    -moz-animation:fadeInDown 1.2s 5s both;
+    animation:fadeInDown 1.2s 5s both;
+  }
