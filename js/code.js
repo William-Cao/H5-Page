@@ -1,13 +1,4 @@
 $(document).ready(function() {
-    (function() {
-        document.addEventListener('DOMContentLoaded', function() {
-            function audioAutoPlay() {
-                var audio = document.getElementById('music');
-                audio.play();
-            }
-            audioAutoPlay();
-        });
-    })();
     var audio = document.getElementById('music');
     audio.play();
     $('#u-globalAudio')[0].addEventListener("touchend", function() {

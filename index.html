@@ -12,6 +12,7 @@
 	<script src="js/swiper.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/code.js"></script>
 </head>
 <script type="text/javascript">
 	if (!document.createElement('canvas').getContext) {
@@ -23,7 +24,7 @@
 		<header class="app-header">
 			<a href="javascript:void(0);" class="music" class="u-globalAudio"
 				id="u-globalAudio"> <span></span>
-				<audio src="bg.mp3" data-src="bg.mp3" loop="loop" preload="auto" id="music"></audio>
+				<audio id="music" src="bg.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
 			</a>
 		</header>
 		<div class="swiper-wrapper">
@@ -59,5 +60,4 @@
 	  <div class="swiper-pagination"></div>
 	</div>
 </body>
-<script src="js/code.js"></script>
 </html>
