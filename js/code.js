@@ -1,15 +1,24 @@
-window.onload = function() {
+$(document).ready(function() {
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            function audioAutoPlay() {
+                var audio = document.getElementById('music');
+                audio.play();
+            }
+            audioAutoPlay();
+        });
+    })();
     var audio = document.getElementById('music');
     audio.play();
-    $('#u-globalAudio')[0].addEventListener("touchend", function(){
-        if(audio.paused){
-        $(this).find('span').css('backgroundPosition','100% 0');
+    $('#u-globalAudio')[0].addEventListener("touchend", function() {
+        if (audio.paused) {
+            $(this).find('span').css('backgroundPosition', '100% 0');
             audio.play();
-         }else{
-            $(this).find('span').css('backgroundPosition','100% -20px');
-                audio.pause();
-         }
-     });
+        } else {
+            $(this).find('span').css('backgroundPosition', '100% -20px');
+            audio.pause();
+        }
+    });
     new Swiper("#swiper-container-v", {
         loop: true,
         direction: "vertical",
@@ -31,25 +40,23 @@ window.onload = function() {
                 if (i == swiper.myactive) {
                     es = slide.style;
                     es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + (translate) + 'px,0) scale(' + scale + ')';
-                    es.zIndex=0;
-                }else{
+                    es.zIndex = 0;
+                } else {
                     es = slide.style;
-                    es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform ='';
-                    es.zIndex=1;
+                    es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = '';
+                    es.zIndex = 1;
                 }
             }
         },
         onTransitionEnd: function(swiper, speed) {
-            for (var i = 0; i < swiper.slides.length; i++) {
-            }
+            for (var i = 0; i < swiper.slides.length; i++) {}
             swiper.myactive = swiper.activeIndex;
         },
         onSetTransition: function(swiper, speed) {
             for (var i = 0; i < swiper.slides.length; i++) {
-                    es = swiper.slides[i].style;
-                    es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+                es = swiper.slides[i].style;
+                es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
             }
         }
-    })
-};
-
+    });
+});
